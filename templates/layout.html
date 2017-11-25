@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<title>Electric Load Analysis App</title>
+<!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"> -->
+<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css' rel='stylesheet' />
+</head>
+
+<body>
+<div class="container">
+  <h1>Electric Load Analysis App</h1>
+  {% for message in get_flashed_messages() %}
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+  {% block body %}{% endblock %}
+</div>
+
+</body>
+</html>
+

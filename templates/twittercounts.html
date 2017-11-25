@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<!doctype html>
+<head>
+<title>Pre-processed Successfully</title>
+
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                </ul>
+            </nav>
+            <h3 class="text-muted">Daily Fantasy Sports Optimizer</h3>
+        </div>
+
+        <div class="jumbotron">
+            <p><a class="btn btn-lg btn-success" href="/goBack" role="button">Go Back</a>
+            <h1>Features:</h1>
+            <p class="lead"></p>
+            	{% for table in tables %}
+    				<h2>{{titles[loop.index]}}</h2>
+    				{{ table|safe }}
+  			{% endfor %}
+            </p>
+        </div>
+
+        <div class="row marketing">
+
+        </div>
+
+        <footer class="footer">
+            <p>&copy; Fantasy Winners Inc. 2017</p>
+        </footer>
+
+    </div>
+</body>
+
+</html>
